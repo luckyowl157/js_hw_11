@@ -37,8 +37,11 @@ body {
             display: flex;
             font-size: 24px;
             font-family: 'Roboto', sans-serif;
-            span {
-                margin-left: 5px;
+            align-items: center;
+            .countryFlag {
+                width: 30px;
+                height: 100%;
+                margin-right: 5px;
             }
         }
         span {

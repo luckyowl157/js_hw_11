@@ -3,9 +3,12 @@ let path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+require('babel-polyfill');
 module.exports = {
-    entry: "./src/index.js",
+    // entry: "./src/index.js",
+    entry: {
+        app: ['babel-polyfill', './src/index.js']
+    },
     output: {
         path: path.resolve(__dirname, 'bundle'),
         filename: 'script.js',
